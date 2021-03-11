@@ -2,7 +2,6 @@ import SignUp from "./SignUp";
 import { Container } from "react-bootstrap"; 
 import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; 
-import Dashboard from "./Dashboard"; 
 
 function App() {
   return (
@@ -12,10 +11,7 @@ function App() {
       <div className="w-100" style={{maxWidth: "400px"}}>
       <Router>
         <AuthProvider>
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route path="/signup" component={SignUp} />
-          </Switch>
+          <Route path="/signup" component={SignUp} />
         </AuthProvider>
       </Router> 
       </div>
