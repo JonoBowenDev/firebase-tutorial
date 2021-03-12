@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from "../contexts/AuthContext";
-import { Link, useHistory } from "react-router-dom"; 
+import { Link } from "react-router-dom"; 
 
 export default function SignUp() {
 
@@ -13,8 +13,6 @@ export default function SignUp() {
     const [loading, setLoading] = useState(false); 
 
     const { signUp } = useAuth(); 
-
-    const history = useHistory(); 
 
     async function handleSubmit (e) {
         e.preventDefault();

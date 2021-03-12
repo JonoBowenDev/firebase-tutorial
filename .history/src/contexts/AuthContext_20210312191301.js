@@ -33,7 +33,7 @@ export function AuthProvider({ children }) {
     }
 
     const updatePassword = (password) => {
-        return currentUser.updatePassword(password);
+        return currentUser.updatePassword(email);
     }
 
     useEffect(() => {
@@ -51,9 +51,7 @@ export function AuthProvider({ children }) {
         login, 
         signUp, 
         logout, 
-        resetPassword, 
-        updateEmail,
-        updatePassword, 
+        resetPassword
     }
     
     return (

@@ -3,7 +3,7 @@ import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom"; 
 
-export default function SignUp() {
+export default function UpdateProfile() {
 
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -12,7 +12,7 @@ export default function SignUp() {
     const [error, setError] = useState(""); 
     const [loading, setLoading] = useState(false); 
 
-    const { signUp } = useAuth(); 
+    const { currentUser } = useAuth(); 
 
     const history = useHistory(); 
 
